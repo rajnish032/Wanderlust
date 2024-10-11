@@ -1,0 +1,41 @@
+<% layout("/layouts/boilerplate") %>
+
+
+
+<h3>All Listings</h3>
+
+<!-- Uncomment the form if you want to add a "Create New Listing" button -->
+<!-- <form method="GET" action="/listings/new">
+  <button>Create New Listing</button>
+</form> -->
+
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+  <% for (let listing of allListings) { %>
+
+  <!-- Wrap the entire card inside the anchor tag -->
+  <a href="/listings/<%= listing._id %>" class="text-decoration-none">
+    <div class="card col listing-card">
+      <!-- Corrected EJS interpolation for image URL and alt text -->
+      <img
+        src="<%= listing.image.url %>"
+        class="card-img-top"
+        alt="<%= listing.title %>"
+        style="height: 20rem"
+      />
+      <div class="card-img-overlay"></div>
+
+      
+      <div class="card-body">
+        <!-- Display the description or other relevant text -->
+        <p class="card-text">
+          <b><%= listing.title %></b> <br/>
+          Price: $<%= listing.price %> / Night <br/>
+          Location: <%= listing.location %>, <%= listing.country %>
+        </p>
+      </div>
+    </div>
+  </a>
+
+  <% } %>
+</div>
+

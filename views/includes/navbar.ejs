@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><i class="fa-regular fa-compass"></i></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        
+          <a class="nav-link active" href="/">Home</a>
+          <a class="nav-link" href="/listings">Listings</a>
+          <a class="nav-link" href="/listings/new">Add new Listings</a>
+        
+      </div>
+      <div class="navbar-nav ms-auto">
+        <% if(!currUser) { %>
+        <a class="nav-link active" href="/signup">Sign Up</a>
+        <a class="nav-link" href="/login">Log in</a>
+        <% } %> <% if(currUser) { %>
+        <a class="nav-link" href="/logout">Log out</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
