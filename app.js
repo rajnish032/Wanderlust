@@ -62,9 +62,9 @@ const sessionOptions = {
   },
 };
 
-app.get("/", (req, res) => {
-  res.send("Hi, I am root");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hi, I am root");
+// });
 
 app.use(session(sessionOptions));
 
@@ -112,6 +112,7 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error.ejs", { message });
   //res.status(statusCode).send(message);
 });
+
 
 app.listen(8080, () => {
   console.log("server is listening to port 8080");

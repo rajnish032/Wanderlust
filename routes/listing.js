@@ -44,4 +44,20 @@ router.get(
   isOwner,
   wrapAsync(listingController.renderEditForm)
 );
+
+// Route to handle category filtering
+router.get('/listings/filter/:filterName', async (req, res) => {
+  try {
+      const filterName = req.params.filterName;
+      const listings = await Listing.find({ category: filterName });
+      res.render("index.ejs", { listings });
+
+      
+  } catch (error) {
+      console.error(error);
+      res.status(500).send('Server Error');
+  }
+});
+
 module.exports = router;
+
