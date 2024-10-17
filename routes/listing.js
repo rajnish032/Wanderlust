@@ -46,13 +46,13 @@ router.get(
 );
 
 // Route to handle category filtering
-router.get('/listings/filter/:filterName', async (req, res) => {
+router.get('/filter/:filterName', async (req, res) => {
   try {
       const filterName = req.params.filterName;
-      const listings = await Listing.find({ category: filterName });
-      res.render("index.ejs", { listings });
+      const allListings = await Listing.find({ category: filterName });
+      res.render("listings/index.ejs", { allListings });
 
-      
+
   } catch (error) {
       console.error(error);
       res.status(500).send('Server Error');
