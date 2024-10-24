@@ -49,7 +49,9 @@ router.get(
 router.get('/filter/:filterName', async (req, res) => {
   try {
       const filterName = req.params.filterName;
+      console.log(filterName);
       const allListings = await Listing.find({ category: filterName });
+      console.log(allListings);
       res.render("listings/index.ejs", { allListings });
 
 

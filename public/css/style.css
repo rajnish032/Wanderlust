@@ -1,130 +1,174 @@
 body{
-    font-family: "Plus Jakarta Sans",sans-serif !important;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
 .container{
-  flex: 1;
+flex: 1;
+padding: 0 1rem;
 }
 
 .navbar {
-  height: 5rem;
-  background-color: white;
+height: 5rem;
+background-color: white;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 1rem;
 }
 
-
 .fa-compass {
-  color: #fe424d;
-  font-size: 2rem;
+color: #fe424d;
+font-size: 2rem;
 }
 
 .nav-link {
-  color: #222222 !important ;
+color: #222222 !important;
 }
+
 /* footer */
 .f-info-links a {
-  text-decoration: none;
-  color: #222222;
+text-decoration: none;
+color: #222222;
 }
 
 .f-info-links a:hover {
-  text-decoration: underline;
+text-decoration: underline;
 }
 
 .f-info-links,
- .f-info-socials,
- .f-info-brand      
-{
-  width: 100%;
-  vertical-align: middle;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.f-info-socials,
+.f-info-brand {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+text-align: center;
 }
- 
-  
 
-.f-info-socials i{
-    font-size: 1.2rem;
-    margin-right: 1rem;
+.f-info-socials i {
+font-size: 1.2rem;
+margin-right: 1rem;
 }
 
 .f-info {
-  height: 8rem;
-  text-align: center;
-
-  background-color: #ebebeb;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: space-evenly;
+height: auto;
+background-color: #ebebeb;
+padding: 1rem;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
 }
 
 /* Cards */
-
-.listing-card{
-  border: none !important;
-  margin-bottom: 2rem;
+.listing-card {
+border: none !important;
+margin-bottom: 2rem;
 }
+
 .card-img-top {
-  border-radius: 1rem !important;
-  width: 100% !important;
-  object-fit: cover !important;
+border-radius: 1rem !important;
+width: 100% !important;
+object-fit: cover !important;
 }
 
 .card-body {
-  padding: 0 !important;
+padding: 0 !important;
 }
 
 .card-text p {
-  font-weight:400;
+font-weight: 400;
 }
+
 /* Cards Effects */
-
 .card-img-overlay {
-  opacity: 0;
-
-
+opacity: 0;
 }
-.card-img-overlay:hover {
-  opacity: 0.2;
-  background-color: white;
 
+.card-img-overlay:hover {
+opacity: 0.2;
+background-color: white;
 }
 
 /* New Page */
-
-.add-btn{
-  background-color: #fe424d !important;
-  border: none !important;
+.add-btn {
+background-color: #fe424d !important;
+border: none !important;
 }
 
 /* Edit Page */
-.edit-btn{
-  background-color: #fe424d !important;
-  border: none !important;
-
+.edit-btn {
+background-color: #fe424d !important;
+border: none !important;
 }
 
-/* show page */
-.show-img{
-  height: 30vh;
+/* Show page */
+.show-img {
+height: 30vh;
+width: 100%;
+object-fit: cover;
 }
 
-.btns{
-  display: flex;
+.btns {
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+justify-content: center;
 }
 
-.show-card{
-  padding-left: 0;
-  padding-right: 0;
+.show-card {
+padding-left: 0;
+padding-right: 0;
 }
 
 /* Map */
+#map {
+height: 400px;
+width: 100%;
+max-width: 80vh;
+}
 
-#map{
-  height: 400px;
-  width: 80vh;
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+.navbar {
+  flex-direction: column;
+  height: auto;
+  padding: 1rem;
+}
+
+.f-info-links, .f-info-socials, .f-info-brand {
+  flex-direction: column;
+  text-align: center;
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+}
+}
+
+@media screen and (max-width: 480px) {
+.navbar {
+  flex-direction: column;
+  height: auto;
+  padding: 0.5rem;
+}
+
+.f-info {
+  padding: 0.5rem;
+  height: auto;
+}
+
+.card-img-top {
+  height: auto;
+}
+
+#map {
+  height: 250px;
+  width: 100%;
+}
 }
