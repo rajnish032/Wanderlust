@@ -1,24 +1,19 @@
 body{
-  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-family: "Plus Jakarta Sans",sans-serif !important;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0;
 }
 
 .container{
 flex: 1;
-padding: 0 1rem;
 }
 
 .navbar {
 height: 5rem;
 background-color: white;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 0 1rem;
 }
+
 
 .fa-compass {
 color: #fe424d;
@@ -26,9 +21,8 @@ font-size: 2rem;
 }
 
 .nav-link {
-color: #222222 !important;
+color: #222222 !important ;
 }
-
 /* footer */
 .f-info-links a {
 text-decoration: none;
@@ -41,35 +35,39 @@ text-decoration: underline;
 
 .f-info-links,
 .f-info-socials,
-.f-info-brand {
+.f-info-brand      
+{
 width: 100%;
+vertical-align: middle;
 display: flex;
 align-items: center;
 justify-content: center;
-flex-direction: column;
-text-align: center;
 }
 
-.f-info-socials i {
-font-size: 1.2rem;
-margin-right: 1rem;
+
+
+.f-info-socials i{
+  font-size: 1.2rem;
+  margin-right: 1rem;
 }
 
 .f-info {
-height: auto;
+height: 8rem;
+text-align: center;
+
 background-color: #ebebeb;
-padding: 1rem;
 display: flex;
 flex-wrap: wrap;
-justify-content: space-evenly;
+justify-content: center;
+align-items: space-evenly;
 }
 
 /* Cards */
-.listing-card {
+
+.listing-card{
 border: none !important;
 margin-bottom: 2rem;
 }
-
 .card-img-top {
 border-radius: 1rem !important;
 width: 100% !important;
@@ -81,94 +79,52 @@ padding: 0 !important;
 }
 
 .card-text p {
-font-weight: 400;
+font-weight:400;
 }
-
 /* Cards Effects */
+
 .card-img-overlay {
 opacity: 0;
-}
 
+
+}
 .card-img-overlay:hover {
 opacity: 0.2;
 background-color: white;
+
 }
 
 /* New Page */
-.add-btn {
+
+.add-btn{
 background-color: #fe424d !important;
 border: none !important;
 }
 
 /* Edit Page */
-.edit-btn {
+.edit-btn{
 background-color: #fe424d !important;
 border: none !important;
+
 }
 
-/* Show page */
-.show-img {
+/* show page */
+.show-img{
 height: 30vh;
-width: 100%;
-object-fit: cover;
 }
 
-.btns {
+.btns{
 display: flex;
-flex-wrap: wrap;
-gap: 1rem;
-justify-content: center;
 }
 
-.show-card {
+.show-card{
 padding-left: 0;
 padding-right: 0;
 }
 
 /* Map */
-#map {
+
+#map{
 height: 400px;
-width: 100%;
-max-width: 80vh;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-.navbar {
-  flex-direction: column;
-  height: auto;
-  padding: 1rem;
-}
-
-.f-info-links, .f-info-socials, .f-info-brand {
-  flex-direction: column;
-  text-align: center;
-}
-
-#map {
-  height: 300px;
-  width: 100%;
-}
-}
-
-@media screen and (max-width: 480px) {
-.navbar {
-  flex-direction: column;
-  height: auto;
-  padding: 0.5rem;
-}
-
-.f-info {
-  padding: 0.5rem;
-  height: auto;
-}
-
-.card-img-top {
-  height: auto;
-}
-
-#map {
-  height: 250px;
-  width: 100%;
-}
+width: 80vh;
 }
