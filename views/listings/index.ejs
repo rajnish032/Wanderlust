@@ -45,75 +45,51 @@
   }
 </style>
 
-
 <div id="filters">
   <div class="filter">
-    <a href="/listings/filter/trending">
-      <div><i class="fa-solid fa-fire"></i></div>
-      <p><b>Trending</b></p>
-    </a>
+    <div><i class="fa-solid fa-fire"></i></div>
+    <p><b>Trending</b></p>
   </div>
   <div class="filter">
-    <a href="/listings/filter/rooms">
-      <div><i class="fa-solid fa-bed"></i></div>
-      <p><b>Rooms</b></p>
-    </a>
+    <div><i class="fa-solid fa-bed"></i></div>
+    <p><b>Rooms</b></p>
   </div>
   <div class="filter">
-    <a href="/listings/filter/iconic-cities">
-      <div><i class="fa-solid fa-mountain-city"></i></div>
-      <p><b>Iconic-cities</b></p>
-    </a>
+    <div><i class="fa-solid fa-mountain-city"></i></div>
+    <p><b>Iconic-cities</b></p>
   </div>
   <div class="filter">
-    <a href="/listings/filter/castles">
-      <div><i class="fa-solid fa-fort-awesome"></i></div>
-      <p><b>Castles</b></p>
-    </a>
+    <div><i class="fa-solid fa-fort-awesome"></i></div>
+    <p><b>Castles</b></p>
   </div>
   <div class="filter">
-    <a href="/listings/filter/amazing-pools">
-      <div><i class="fa-solid fa-person-swimming"></i></div>
-      <p><b>Beach</b></p>
-    </a>
+    <div><i class="fa-solid fa-person-swimming"></i></div>
+    <p><b>Beach</b></p>
   </div>
   <div class="filter">
-    <a href="/listings/filter/camping">
-      <div><i class="fa-solid fa-campground"></i></div>
-      <p><b>Camping</b></p>
-    </a>
+    <div><i class="fa-solid fa-campground"></i></div>
+    <p><b>Camping</b></p>
   </div>
   <div class="filter">
-    <a href="/listings/filter/farms">
-      <div><i class="fa-solid fa-cow"></i></div>
-      <p><b>Farms</b></p>
-    </a>
+    <div><i class="fa-solid fa-cow"></i></div>
+    <p><b>Farms</b></p>
   </div>
   <div class="filter">
-    <a href="/listings/filter/arctic">
-      <div><i class="fa-solid fa-snowflake"></i></div>
-      <p><b>Arctic</b></p>
-    </a>
+    <div><i class="fa-solid fa-snowflake"></i></div>
+    <p><b>Arctic</b></p>
   </div>
   <div class="filter">
-    <a href="/listings/filter/camping">
-      <div><i class="fa-solid fa-palette"></i></div>
-      <p><b>Creative</b></p>
-    </a>
+    <div><i class="fa-solid fa-palette"></i></div>
+    <p><b>Creative</b></p>
   </div>
   <div class="filter">
-    <a href="/listings/filter/farms">
-      <div><i class="fa-solid fa-tower-observation"></i></div>
-      <p><b>Towers</b></p>
-    </a>
+    <div><i class="fa-solid fa-tower-observation"></i></div>
+    <p><b>Towers</b></p>
   </div>
   <div class="filter">
-    <a href="/listings/filter/arctic">
-      <div><i class="fa-solid fa-mountain-city"></i></div>
-      <p><b>Mountain</b></p>
-    </a>
+    <div><i class="fa-solid fa-mountain-city"></i></div>
+    <p><b>Mountain</b></p>
   </div>
-
 
   <div class="tax-toggle">
     <div class="form-check-reverse form-switch">
@@ -149,9 +125,9 @@
         <!-- Display the description or other relevant text -->
         <p class="card-text">
           <b><%= listing.title %></b> <br />
-          Price: $<%= listing.price %> / Night  
+          Price: $<%= listing.price %> / Night
           <i class="tax-info"> &nbsp; +18% GST</i> <br />
-          
+
           Location: <%= listing.location %>, <%= listing.country %>
         </p>
       </div>
@@ -163,15 +139,14 @@
 
 <script>
   let taxSwitch = document.getElementById("flexSwitchCheckDefault");
-  taxSwitch.addEventListener("click",() => {
+  taxSwitch.addEventListener("click", () => {
     let taxInfo = document.getElementsByClassName("tax-info");
-    for(info of taxInfo) {
-      if(info.style.display != "inline") {
+    for (info of taxInfo) {
+      if (info.style.display != "inline") {
         info.style.display = "inline";
       } else {
         info.style.display = "none";
       }
-      
     }
   });
 </script>
