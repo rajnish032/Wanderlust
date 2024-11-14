@@ -45,21 +45,21 @@ router.get(
   wrapAsync(listingController.renderEditForm)
 );
 
-// Route to handle category filtering
-router.get('/filter/:filterName', async (req, res) => {
-  try {
-      const filterName = req.params.filterName;
-      console.log(filterName);
-      const allListings = await Listing.find({ category: filterName });
-      console.log(allListings);
-      res.render("listings/index.ejs", { allListings });
+// // Route to handle category filtering
+// router.get('/filter/:filterName', async (req, res) => {
+//   try {
+//       const filterName = req.params.filterName;
+//       console.log(filterName);
+//       const allListings = await Listing.find({ category: filterName });
+//       console.log(allListings);
+//       res.render("listings/index.ejs", { allListings });
 
 
-  } catch (error) {
-      console.error(error);
-      res.status(500).send('Server Error');
-  }
-});
+//   } catch (error) {
+//       console.error(error);
+//       res.status(500).send('Server Error');
+//   }
+// });
 
 module.exports = router;
 
