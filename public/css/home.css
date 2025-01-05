@@ -1,0 +1,251 @@
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding:25px 4px;
+    font-size: 18px;
+    font-family: sans-serif;
+    background-color: #fe424d;
+    color: white;
+    opacity: 0.85;
+}
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 22px;
+    margin-left: 5px;
+}
+.hamburger{
+    display: none;
+
+}
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+li{
+    list-style: none;
+    padding: 5px 8px;
+    margin: 1px 5px;
+    cursor: pointer;
+
+    a{
+        text-decoration: none;
+        color: white;
+        transition: all 0.8s;
+    }
+}
+li a:hover{
+    color: #ffcdd2;
+}
+
+@media (max-width: 768px) {
+    .items {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background:  linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(227,110,117,1) 0%, rgba(250,78,88,1) 43%, rgba(184,12,22,1) 100%); /* Adjust to match your navbar's background */
+      position: absolute;
+      top: 60px; /* Adjust based on your navbar height */
+      right: 0;
+      width: 200px;
+      height: auto;
+      padding: 25px;
+      border-radius: 15px;
+    }
+    ul{
+        display: flex;
+        justify-content:start;
+        align-items: center;
+        flex-direction: column;
+    }
+  
+    .items.show {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+    
+    #hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin:50px 0px 50px 0px;
+        height: 100%;
+        width: 100%;
+
+        img{
+            width: 300px;
+        }
+        .text{
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            flex-direction: column;
+
+        }
+
+    }
+
+    .footer{
+        margin-top: 30px;
+    .footer-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer-section{
+        margin:15px 2px;
+    }
+    .follow{
+        margin:15px 2px;
+    }
+}
+  }
+
+
+#hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 8px ;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+
+    .text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 25px;
+        margin-left: 5px;
+
+        span{
+            color: #fe424d;
+        }
+        .main{
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+    }
+}
+
+.footer {
+background-color: #fe424d;
+color: #ffffff;
+padding: 40px 20px;
+text-align: center;
+font-family: Arial, sans-serif;
+opacity: 0.85;
+}
+
+.footer-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0px 15px;
+flex: 1;
+
+}
+
+.footer-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column  ;
+}
+.footer-section h3 {
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+font-size: 16px;
+
+}
+
+.footer-section ul {
+list-style-type: none;
+padding: 0;
+
+}
+
+.footer-section ul li {
+margin: 2px 0;
+}
+
+.footer-section ul li a {
+color: #ffffff;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+.follow {
+    margin-right: 10px;
+img{
+    margin: 2px 3px;
+}
+}
+.footer-section ul li a:hover {
+color: #ffcdd2;
+}
+
+.footer-bottom {
+    align-items: center;
+    justify-content: center;
+margin-top: 20px;
+border-top: 1px solid #ffffff;
+padding-top: 10px;
+font-size: 14px;
+}
+  
+::-webkit-scrollbar {
+    width: 6px; /* For vertical scrollbars */
+    height: 6px; /* For horizontal scrollbars */
+  }
+  
+  /* Target the scrollbar track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray background */
+    border-radius: 10px;
+  }
+  
+  /* Target the scrollbar thumb (the draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background: #d63a43; /* Gray thumb */
+    border-radius: 10px;
+    height: 2px;
+  }
+  
+  /* Change the thumb color on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b03239; /* Darker gray */
+  }
