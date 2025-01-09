@@ -210,12 +210,18 @@ transition: color 0.3s ease;
 }
 .follow {
     margin-right: 10px;
+    position: relative;
+    right: 80px;
 img{
     margin: 2px 3px;
 }
 }
 .footer-section ul li a:hover {
 color: #ffcdd2;
+}
+.quick{
+    position: relative;
+    right: 85px;
 }
 
 .footer-bottom {
