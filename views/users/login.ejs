@@ -1,34 +1,64 @@
 <% layout("/layouts/boilerplate") %>
 
-<div class="row mt-3">
+<div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center bg-light">
+  <div class="row w-100 align-items-center">
 
-    <h1 class="col-6 offset-3">Login</h1>
-  <div class="col-6 offset-3">
-    <form action="/login" method="POST" class="needs-validation" novalidate>
+    <!-- Illustration Section -->
+    <div class="col-lg-6 d-none d-lg-block text-center">
+      <img src="/assets/illustration.png" alt="Login Illustration" class="img-fluid" style="max-height: 500px;">
+    </div>
+
+    <!-- Login Form Section -->
+    <div class="col-lg-4 col-md-8 col-sm-10 mx-auto p-4 shadow rounded" style="background-color: #fff;">
+      <h1 class="text-center mb-4" style="color: #FE5E68;">Login</h1>
+      <form action="/login" method="POST" class="needs-validation" novalidate>
         <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input
-              name="username"
-              id="username"
-              type="text"
-              class="form-control"
-              required
-            />
-          </div>
+          <label for="username" class="form-label" style="color: #333;">Username</label>
+          <input
+            name="username"
+            id="username"
+            type="text"
+            class="form-control"
+            required
+            style="border-color: #FE5E68;"
+          />
+        </div>
 
-         <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input
-              name="password"
-              id="password"
-              type="password"
-              class="form-control"
-              required
-            />
-         </div>
+        <div class="mb-3">
+          <label for="password" class="form-label" style="color: #333;">Password</label>
+          <input
+            name="password"
+            id="password"
+            type="password"
+            class="form-control"
+            required
+            style="border-color: #FE5E68;"
+          />
+        </div>
 
-         <button class="btn btn-success">Login</button>
-
-    </form>
+        <button class="btn btn-success w-100" style="background-color: #FE5E68; border: none;">
+          Login
+        </button>
+      </form>
+    </div>
   </div>
 </div>
+
+<style>
+  body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  }
+  .form-control:focus {
+    border-color: #FE5E68;
+    box-shadow: 0 0 5px rgba(254, 94, 104, 0.5);
+  }
+  @media (max-width: 991.98px) {
+    .col-lg-6 {
+      display: none;
+    }
+    .col-lg-4 {
+      margin-top: 20px;
+    }
+  }
+</style>
